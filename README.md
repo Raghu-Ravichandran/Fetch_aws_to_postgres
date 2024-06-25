@@ -52,7 +52,7 @@ aws_sqs_to_postgres/
 
 # How would you deploy this application in production?
 1. Containerize the Application:
-Use Docker to create a container for your application, ensuring all dependencies are included.
+Use Docker to create a container for the application, ensuring all dependencies are included.
 
 2. Use a Managed Service:
 Deploy the application on a cloud platform like AWS ECS, AWS Fargate, or Kubernetes for scalability and reliability.
