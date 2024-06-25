@@ -1,0 +1,33 @@
+# Challenges Faced
+
+## 1. Setting Up the Local Environment
+- Challenge: Ensuring that Docker, Docker Compose, and all necessary dependencies are correctly installed and configured on the local machine.
+- Solution: Followed detailed installation guides and verified installation with test commands to ensure all components were properly set up.
+
+## 2. Reading from AWS SQS Queue via LocalStack
+- Challenge: Connecting to the LocalStack SQS service and correctly configuring the endpoint URL.
+- Solution: Used boto3 with a custom endpoint URL pointing to the LocalStack service running locally to successfully fetch messages from the SQS queue.
+
+## 3. Masking Personal Identifiable Information (PII)
+- Challenge: Developing an efficient and consistent method to mask PII data, such as `device_id` and `ip`, while ensuring duplicate values can still be identified.
+- Solution: Implemented SHA-256 hashing to mask the PII fields, ensuring the same input produces the same output, thereby preserving the ability to identify duplicates.
+
+## 4. Inserting Data into PostgreSQL Database
+- Challenge: Establishing a connection to the PostgreSQL database running in a Docker container and ensuring the table schema matches the incoming data.
+- Solution: Used psycopg2 to connect to the PostgreSQL database and verified the table schema. Ensured data types in the INSERT statements matched the table's schema.
+
+## 5. Data Transformation and JSON Parsing
+- Challenge: Parsing complex JSON data and flattening it to match the database schema.
+- Solution: Utilized Python's built-in JSON module to parse and flatten the JSON data, ensuring that all necessary fields were correctly extracted and transformed.
+
+## 6. Error Handling and Robustness
+- Challenge: Implementing error handling to manage possible issues such as database connection failures, message processing errors, or network issues.
+- Solution: Added try-except blocks to handle exceptions gracefully and ensure the application can recover from or log errors for troubleshooting.
+
+## 7. Testing and Verification
+- Challenge: Testing the entire pipeline from fetching messages from the SQS queue to inserting data into the PostgreSQL database.
+- Solution: Used test messages and verified the entries in the PostgreSQL database to ensure the data pipeline worked correctly from end to end.
+
+## 8. Time Constraints
+- Challenge: Completing the project within the recommended 2-3 hour timeframe.
+- Solution: Prioritized core functionality and documented additional features and improvements in the README's "Next Steps" section.
