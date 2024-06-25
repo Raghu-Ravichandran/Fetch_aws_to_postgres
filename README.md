@@ -50,42 +50,42 @@ aws_sqs_to_postgres/
 
 ## Questions 
 
-● How would you deploy this application in production?
-Deploying in Production:
+# How would you deploy this application in production?
+1. Deploying in Production:
 
-Containerize the Application:
+2. Containerize the Application:
 Use Docker to create a container for your application, ensuring all dependencies are included.
 
-Use a Managed Service:
+3. Use a Managed Service:
 Deploy the application on a cloud platform like AWS ECS, AWS Fargate, or Kubernetes for scalability and reliability.
 
-● What other components would you want to add to make this production ready?
-Logging and Monitoring:
+# What other components would you want to add to make this production ready?
+1. Logging and Monitoring:
 Integrate logging (e.g., using AWS CloudWatch) and monitoring tools to track application performance and issues.
 
-Error Handling and Retries:
+2. Error Handling and Retries:
 Implement robust error handling and retries for reading from the queue and writing to the database.
 
-CI/CD Pipeline:
+3. CI/CD Pipeline:
 Set up a CI/CD pipeline for automated testing, building, and deployment.
 
-● How can this application scale with a growing dataset.
-Horizontal Scaling:
+# How can this application scale with a growing dataset.
+1. Horizontal Scaling:
 Use container orchestration tools like Kubernetes to scale the application horizontally by running multiple instances.
 
-Database Optimization:
+2. Database Optimization:
 Optimize the PostgreSQL database with indexing and partitioning to handle large datasets efficiently.
 
-● How can PII be recovered later on?
-Secure Storage:
+# How can PII be recovered later on?
+1. Secure Storage:
 Store the original PII data securely and separately if needed for recovery, ensuring compliance with data protection regulations.
 
-Encryption:
+2. Encryption:
 Use encryption for PII data storage and access controls to protect sensitive information.
 
 ● What are the assumptions you made?
-The JSON structure from the SQS queue is consistent and follows the schema mentioned.
-The Docker images provided have the required test data and configurations.
-The masking function used (SHA256) is sufficient for identifying duplicate values while ensuring data privacy.
-If the `create_date` field is missing, the current date is assumed to ensure all records are timestamped.
+1. The JSON structure from the SQS queue is consistent and follows the schema mentioned.
+2. The Docker images provided have the required test data and configurations.
+3. The masking function used (SHA256) is sufficient for identifying duplicate values while ensuring data privacy.
+4. If the `create_date` field is missing, the current date is assumed to ensure all records are timestamped.
 
