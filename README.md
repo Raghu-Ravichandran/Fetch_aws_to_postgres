@@ -51,12 +51,10 @@ aws_sqs_to_postgres/
 ## Questions 
 
 # How would you deploy this application in production?
-1. Deploying in Production:
-
-2. Containerize the Application:
+1. Containerize the Application:
 Use Docker to create a container for your application, ensuring all dependencies are included.
 
-3. Use a Managed Service:
+2. Use a Managed Service:
 Deploy the application on a cloud platform like AWS ECS, AWS Fargate, or Kubernetes for scalability and reliability.
 
 # What other components would you want to add to make this production ready?
@@ -83,7 +81,7 @@ Store the original PII data securely and separately if needed for recovery, ensu
 2. Encryption:
 Use encryption for PII data storage and access controls to protect sensitive information.
 
-● What are the assumptions you made?
+# What are the assumptions you made?
 1. The JSON structure from the SQS queue is consistent and follows the schema mentioned.
 2. The Docker images provided have the required test data and configurations.
 3. The masking function used (SHA256) is sufficient for identifying duplicate values while ensuring data privacy.
