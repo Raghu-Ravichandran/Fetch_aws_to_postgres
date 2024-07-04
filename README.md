@@ -10,6 +10,7 @@ This application reads JSON data from an AWS SQS Queue, masks sensitive data, an
 2. Install dependencies using `pip install -r requirements.txt`.
 3. Start the Docker containers using `docker-compose up -d`.
 4. Run the application using `python main.py`.
+5. Connect to the Postgres DB and verify using `psql -d postgres -U postgres -p 5432 -h localhost -W`, `select * from user_logins;`.
 
 ## Usage
 
